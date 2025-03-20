@@ -63,13 +63,6 @@ with engine.connect() as connection:
         CONSTRAINT fk_author FOREIGN KEY(author_id) REFERENCES authors(author_id) ON DELETE CASCADE
     );
     """
-    try:
-        connection.execute(text(sql))
-        print("Tablas creadas exitosamente.")
-    except Exception as e:
-        print(f"Error al crear las tablas: {e}")
-        
-
 
 # 3) Insert data
 with engine.connect() as connection:
